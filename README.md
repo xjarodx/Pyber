@@ -1,3 +1,4 @@
+```
 %matplotlib inline
 # Dependencies and Setup
 import matplotlib.pyplot as plt
@@ -15,7 +16,9 @@ ride_df = pd.read_csv(ride_data_to_load)
 # Combine the data into a single dataset
 merged_table = pd.merge(ride_df, city_df, on="city", how="left")
 merged_table
+```
 
+```
 # Display the data table for preview
 merged_table.head()
 
@@ -34,7 +37,9 @@ sub_driver_count= sub_df.groupby(["city"]).mean()['driver_count']
 rur_ride_count = rur_df.groupby(["city"]).count()['ride_id']
 rur_avg_fare=rur_df.groupby(["city"]).mean()['fare']
 rur_driver_count= rur_df.groupby(["city"]).mean()['driver_count']
+```
 
+```
 plt.scatter(urb_ride_count,
            urb_avg_fare,
            s=10*urb_driver_count, c="coral",
@@ -66,7 +71,9 @@ lgnd.legendHandles[1]._sizes = [30]
 lgnd.legendHandles[2]._sizes = [30]
 
 plt.savefig('Images/Pyber Ride Sharing Data.png', bbox_inches="tight")
+```
 
+```
 city_type_df = merged_table.groupby(["type"]).sum()['fare']
 
 plt.pie(city_type_df,
@@ -79,7 +86,9 @@ plt.pie(city_type_df,
 plt.title("% of Total Fares by City Type")
 
 plt.savefig('Images/Total Fares by City Type.png')
+```
 
+```
 rides_type_df = merged_table.groupby(["type"]).count()["ride_id"]
 
 plt.pie(rides_type_df,
@@ -105,4 +114,4 @@ plt.pie(driver_city_df,
 plt.title("% of Total Drivers by City Type")
 
 plt.savefig('Images/Total Drivers by City Type.png')
-
+```
