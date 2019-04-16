@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-# File to Load (Remember to change these)
+# File to Load
 city_data_to_load = "data/city_data.csv"
 ride_data_to_load = "data/ride_data.csv"
 
@@ -21,7 +21,9 @@ merged_table
 ```
 # Display the data table for preview
 merged_table.head()
+```
 
+```
 urb_df=merged_table.loc[merged_table["type"]=="Urban"]
 sub_df=merged_table.loc[merged_table["type"]=="Suburban"]
 rur_df=merged_table.loc[merged_table["type"]=="Rural"]
@@ -73,6 +75,8 @@ lgnd.legendHandles[2]._sizes = [30]
 plt.savefig('Images/Pyber Ride Sharing Data.png', bbox_inches="tight")
 ```
 
+[[https://github.com/xjarodx/Pyber/blob/master/Images/Pyber%20Ride%20Sharing%20Data.png]]
+
 ```
 city_type_df = merged_table.groupby(["type"]).sum()['fare']
 
@@ -88,6 +92,8 @@ plt.title("% of Total Fares by City Type")
 plt.savefig('Images/Total Fares by City Type.png')
 ```
 
+[[https://github.com/xjarodx/Pyber/blob/master/Images/Total%20Fares%20by%20City%20Type.png]]
+
 ```
 rides_type_df = merged_table.groupby(["type"]).count()["ride_id"]
 
@@ -101,7 +107,11 @@ plt.pie(rides_type_df,
 plt.title("% of Total Rides by City Type")
 
 plt.savefig('Images/Total Rides by City Type.png')
+```
 
+[[https://github.com/xjarodx/Pyber/blob/master/Images/Total%20Rides%20by%20City%20Type.png]]
+
+```
 driver_city_df = city_df.groupby(["type"]).sum()['driver_count']
 
 plt.pie(driver_city_df,
@@ -115,3 +125,5 @@ plt.title("% of Total Drivers by City Type")
 
 plt.savefig('Images/Total Drivers by City Type.png')
 ```
+[[https://github.com/xjarodx/Pyber/blob/master/Images/Total%20Drivers%20by%20City%20Type.png]]
+
