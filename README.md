@@ -75,7 +75,7 @@ lgnd.legendHandles[2]._sizes = [30]
 plt.savefig('Images/Pyber Ride Sharing Data.png', bbox_inches="tight")
 ```
 
-[[https://github.com/xjarodx/Pyber/blob/master/Images/Pyber%20Ride%20Sharing%20Data.png]]
+![Scatter Plot](https://github.com/xjarodx/Pyber/blob/master/Images/Pyber%20Ride%20Sharing%20Data.png)
 
 ```
 city_type_df = merged_table.groupby(["type"]).sum()['fare']
