@@ -92,7 +92,7 @@ plt.title("% of Total Fares by City Type")
 plt.savefig('Images/Total Fares by City Type.png')
 ```
 
-[[https://github.com/xjarodx/Pyber/blob/master/Images/Total%20Fares%20by%20City%20Type.png]]
+![Total Fares By City](https://github.com/xjarodx/Pyber/blob/master/Images/Total%20Fares%20by%20City%20Type.png)
 
 ```
 rides_type_df = merged_table.groupby(["type"]).count()["ride_id"]
@@ -109,7 +109,7 @@ plt.title("% of Total Rides by City Type")
 plt.savefig('Images/Total Rides by City Type.png')
 ```
 
-[[https://github.com/xjarodx/Pyber/blob/master/Images/Total%20Rides%20by%20City%20Type.png]]
+![Total Rides By City](https://github.com/xjarodx/Pyber/blob/master/Images/Total%20Rides%20by%20City%20Type.png)
 
 ```
 driver_city_df = city_df.groupby(["type"]).sum()['driver_count']
@@ -125,5 +125,5 @@ plt.title("% of Total Drivers by City Type")
 
 plt.savefig('Images/Total Drivers by City Type.png')
 ```
-[[https://github.com/xjarodx/Pyber/blob/master/Images/Total%20Drivers%20by%20City%20Type.png]]
+![Total Drivers By City Type](https://github.com/xjarodx/Pyber/blob/master/Images/Total%20Drivers%20by%20City%20Type.png)
 
