@@ -1,3 +1,5 @@
+This repo demonstrates how to read csvs in python and generate simple graphs to showcase the data. 
+
 ```
 %matplotlib inline
 # Dependencies and Setup
